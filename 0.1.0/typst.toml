@@ -1,8 +1,8 @@
 [package]
-    name        = "scibook"
+    name        = "scislide"
     version     = "0.1.0"
-    entrypoint  = "scibook.typ"
+    entrypoint  = "scislide.typ"
     authors     = ["ivaquero"]
     license     = "MIT"
-    description = "Template for Scientific Books"
+    description = "Template for Scientific Slides"
     repository  = ""

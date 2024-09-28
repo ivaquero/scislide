@@ -24,7 +24,7 @@
   ending: [感谢大家聆听],
   doc,
 ) = {
-  set text(font: "Songti SC", weight: "light", size: 20pt)
+
   set par(
     first-line-indent: 2em,
     justify: true,
@@ -33,6 +33,14 @@
   )
   set block(above: 1em, below: 0.5em)
   set math.equation(numbering: "(1)")
+
+  let fonts = toml("fonts.toml")
+  set text(
+    font: fonts.at(lang).context,
+    weight: "light",
+    size: 20pt,
+  )
+
   set ref(supplement: it => {
     if it.func() == table {
       it.caption
@@ -46,11 +54,11 @@
   show link: underline
   show: metropolis-theme.with(
     aspect-ratio: "16-9",
-    footer: text(footer, size: footer-size, font: "Kaiti SC"),
+    footer: text(footer, size: footer-size, font: fonts.at(lang).footer),
     config-info(
       title: [#text(title, size: 40pt)],
       subtitle: [#subtilte],
-      author: [#text(author, size: author-size, font: "Kaiti SC")],
+      author: [#text(author, size: author-size, font: fonts.at(lang).author)],
       date: datetime.today(),
       institution: [institution],
       logo: emoji.school,
