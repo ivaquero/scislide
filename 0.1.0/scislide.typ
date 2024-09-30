@@ -36,7 +36,7 @@
 
   let fonts = toml("fonts.toml")
   set text(
-    font: fonts.at(lang).context,
+    font: fonts.at("zh").context,
     weight: "light",
     size: 20pt,
   )
@@ -54,11 +54,11 @@
   show link: underline
   show: metropolis-theme.with(
     aspect-ratio: "16-9",
-    footer: text(footer, size: footer-size, font: fonts.at(lang).footer),
+    footer: text(footer, size: footer-size, font: fonts.at("zh").footer),
     config-info(
       title: [#text(title, size: 40pt)],
       subtitle: [#subtilte],
-      author: [#text(author, size: author-size, font: fonts.at(lang).author)],
+      author: [#text(author, size: author-size, font: fonts.at("zh").author)],
       date: datetime.today(),
       institution: [institution],
       logo: emoji.school,
