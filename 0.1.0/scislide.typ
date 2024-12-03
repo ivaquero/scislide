@@ -10,7 +10,7 @@
 // banners
 #import "@preview/gentle-clues:1.0.0": *
 // figures
-#import "@preview/subpar:0.1.1": grid as sgrid
+#import "@preview/subpar:0.2.0": grid as sgrid
 
 #let conf(
   title: none,
@@ -50,6 +50,22 @@
       it.supplement
     } else if it.func() == math.equation { } else { }
   })
+
+  show figure.caption: it => [
+    #it.supplement
+    #context it.counter.display(it.numbering)
+    #it.body
+  ]
+  show figure.where(kind: table): set figure.caption(position: top)
+
+  show raw.where(block: true): block.with(
+    fill: luma(240),
+    inset: 0.8em,
+    radius: 5pt,
+    width: 100%,
+    above: 1em,
+    below: 1em,
+  )
 
   show link: underline
   show: metropolis-theme.with(
