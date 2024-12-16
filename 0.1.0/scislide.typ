@@ -3,12 +3,14 @@
 #import themes.metropolis: *
 // indent
 #import "@preview/indenta:0.0.3": fix-indent
+// checklist
+#import "@preview/cheq:0.2.2": checklist
 // physics
 #import "@preview/physica:0.9.2": *
 // theorems
 #import "@preview/ctheorems:1.1.3": *
 // banners
-#import "@preview/gentle-clues:1.0.0": *
+#import "@preview/gentle-clues:1.1.0": *
 // figures
 #import "@preview/subpar:0.2.0": grid as sgrid
 
@@ -24,7 +26,6 @@
   ending: [感谢大家聆听],
   doc,
 ) = {
-
   set par(
     first-line-indent: 2em,
     justify: true,
