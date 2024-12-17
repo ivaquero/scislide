@@ -1,3 +1,4 @@
+
 // slides
 #import "@preview/touying:0.5.3": *
 #import themes.metropolis: *
@@ -6,7 +7,7 @@
 // checklist
 #import "@preview/cheq:0.2.2": checklist
 // physics
-#import "@preview/physica:0.9.2": *
+#import "@preview/physica:0.9.4": *
 // theorems
 #import "@preview/ctheorems:1.1.3": *
 // banners
@@ -42,15 +43,17 @@
     size: 20pt,
   )
 
-  set ref(supplement: it => {
-    if it.func() == table {
-      it.caption
-    } else if it.func() == image {
-      it.caption
-    } else if it.func() == figure {
-      it.supplement
-    } else if it.func() == math.equation { } else { }
-  })
+  set ref(
+    supplement: it => {
+      if it.func() == table {
+        it.caption
+      } else if it.func() == image {
+        it.caption
+      } else if it.func() == figure {
+        it.supplement
+      } else if it.func() == math.equation { } else { }
+    },
+  )
 
   show figure.caption: it => [
     #it.supplement
@@ -80,9 +83,7 @@
       institution: [institution],
       logo: emoji.school,
     ),
-    config-methods(
-      cover: utils.semi-transparent-cover.with(alpha: 80%),
-    ),
+    config-methods(cover: utils.semi-transparent-cover.with(alpha: 80%)),
     config-colors(
       primary-light: rgb("#fcbd00"),
       secondary: rgb("#3297df"),
@@ -124,7 +125,7 @@
   padding: (top: 0em, bottom: 0em),
   fill: rgb("#FFFFFF"),
   // stroke: rgb("#000000"),
-  inset: (left: 0em, right: 0.5em, top: 0.2em, bottom: 0.2em)
+  inset: (left: 0em, right: 0.5em, top: 0.2em, bottom: 0.2em),
 )
 
 #let theorem = thmbox(
@@ -163,23 +164,23 @@
 )
 
 #let tip = thmbox(
- "",
- none,
- fill: rgb("#FFFEE6"),
- radius: 0.5em,
- padding: (top: 0em, bottom: 0em),
- separator: [],
- // stroke: rgb("#000000")
+  "",
+  none,
+  fill: rgb("#FFFEE6"),
+  radius: 0.5em,
+  padding: (top: 0em, bottom: 0em),
+  separator: [],
+  // stroke: rgb("#000000")
 ).with(numbering: none)
 
 #let algo = thmbox(
- "",
- terms.algo,
- fill: rgb("#FAF2FB"),
- radius: 0em,
- padding: (top: 0em, bottom: 0em),
- separator: [],
- // stroke: rgb("#000000")
+  "",
+  terms.algo,
+  fill: rgb("#FAF2FB"),
+  radius: 0em,
+  padding: (top: 0em, bottom: 0em),
+  separator: [],
+  // stroke: rgb("#000000")
 )
 
 // banners
