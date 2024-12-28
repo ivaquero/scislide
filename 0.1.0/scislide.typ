@@ -14,6 +14,9 @@
 #import "@preview/gentle-clues:1.1.0": *
 // figures
 #import "@preview/subpar:0.2.0": grid as sgrid
+// codes
+#import "@preview/codly:1.1.0": *
+#import "@preview/codly-languages:0.1.1": *
 
 #let conf(
   title: none,
@@ -62,14 +65,15 @@
   ]
   show figure.where(kind: table): set figure.caption(position: top)
 
-  show raw.where(block: true): block.with(
-    fill: luma(240),
-    inset: 0.8em,
-    radius: 5pt,
-    width: 100%,
-    above: 1em,
-    below: 1em,
+  codly(
+    languages: codly-languages,
+    fill: rgb("#F2F3F4"),
+    zebra-fill: none,
+    inset: (x: .3em, y: .2em),
+    stroke: -1pt + rgb("#000000"),
+    radius: .5em,
   )
+  show: codly-init.with()
 
   show link: underline
   show: metropolis-theme.with(
