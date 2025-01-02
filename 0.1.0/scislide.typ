@@ -17,6 +17,8 @@
 // codes
 #import "@preview/codly:1.1.0": *
 #import "@preview/codly-languages:0.1.1": *
+// annot
+#import "@preview/pinit:0.2.2": *
 
 #let conf(
   title: none,
