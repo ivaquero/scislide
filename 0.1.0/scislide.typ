@@ -12,11 +12,13 @@
 #import "@preview/ctheorems:1.1.3": *
 // banners
 #import "@preview/gentle-clues:1.1.0": *
-// figures
+// subfigures
 #import "@preview/subpar:0.2.0": grid as sgrid
+// diagram
+#import "@preview/fletcher:0.5.4": diagram, node, edge
 // codes
-#import "@preview/codly:1.1.0": *
-#import "@preview/codly-languages:0.1.1": *
+#import "@preview/codly:1.2.0": *
+#import "@preview/codly-languages:0.1.3": *
 // annot
 #import "@preview/pinit:0.2.2": *
 
