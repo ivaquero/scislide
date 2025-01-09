@@ -18,7 +18,7 @@
 #import "@preview/fletcher:0.5.4": diagram, node, edge
 // codes
 #import "@preview/codly:1.2.0": *
-#import "@preview/codly-languages:0.1.3": *
+#import "@preview/codly-languages:0.1.4": *
 // annot
 #import "@preview/pinit:0.2.2": *
 
