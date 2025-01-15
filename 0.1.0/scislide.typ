@@ -88,7 +88,7 @@
       subtitle: [#subtilte],
       author: [#text(author, size: author-size, font: fonts.at("zh").author)],
       date: datetime.today(),
-      institution: [institution],
+      institution: [#institute],
       logo: emoji.school,
     ),
     config-methods(cover: utils.semi-transparent-cover.with(alpha: 80%)),
