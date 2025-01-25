@@ -16,6 +16,7 @@
 #import "@preview/subpar:0.2.0": grid as sgrid
 // diagram
 #import "@preview/fletcher:0.5.4": diagram, node, edge
+#import "@preview/cetz-plot:0.1.1": *
 // codes
 #import "@preview/codly:1.2.0": *
 #import "@preview/codly-languages:0.1.6": *
