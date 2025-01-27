@@ -22,6 +22,8 @@
 #import "@preview/codly-languages:0.1.6": *
 // annot
 #import "@preview/pinit:0.2.2": *
+// excel
+#import "@preview/rexllent:0.3.0": xlsx-parser
 
 #let conf(
   title: none,
