@@ -118,6 +118,43 @@
   ]
 }
 
+// text
+#let fonts = toml("fonts.toml")
+#let ctext(body) = text(body, font: fonts.at("zh").math)
+
+// tables
+#let frame(stroke) = (
+  (x, y) => (
+    top: if y < 2 {
+      stroke
+    } else {
+      0pt
+    },
+    bottom: stroke,
+  )
+)
+
+// tables
+#let frame2(stroke) = (
+  (x, y) => (
+    left: if x > 2 {
+      stroke
+    } else {
+      0pt
+    },
+    top: stroke,
+    bottom: stroke,
+  )
+)
+
+#let ktable(data, k, inset: 0.3em) = table(
+  columns: k,
+  inset: inset,
+  align: center + horizon,
+  stroke: frame(rgb("000")),
+  ..data.flatten(),
+)
+
 // theorems
 #let terms = (
   "def": "定义",
@@ -204,7 +241,7 @@
   ..args,
 )
 
-#let alert(title: linguify("alert"), icon: emoji.excl, ..args) = clue(
+#let alert(title: "", icon: emoji.excl, ..args) = clue(
   accent-color: red,
   title: title,
   icon: icon,
