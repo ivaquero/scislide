@@ -35,6 +35,7 @@
   institute: none,
   footer: [],
   footer-size: 14pt,
+  list-indent: 1.2em,
   outline-title: [内容提要],
   ending: [感谢大家聆听],
   doc,
@@ -46,6 +47,8 @@
     linebreaks: "optimized",
   )
   set block(above: 1em, below: 0.5em)
+  set list(indent: list-indent)
+  set enum(indent: list-indent)
   set math.equation(numbering: "(1)")
 
   let fonts = toml("fonts.toml")
