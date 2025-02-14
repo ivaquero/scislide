@@ -79,10 +79,11 @@
 
   codly(
     languages: codly-languages,
+    display-name: false,
     fill: rgb("#F2F3F4"),
+    number-format: none,
     zebra-fill: none,
     inset: (x: .3em, y: .2em),
-    stroke: -1pt + rgb("#000000"),
     radius: .5em,
   )
   show: codly-init.with()
@@ -156,6 +157,24 @@
   align: center + horizon,
   stroke: frame(rgb("000")),
   ..data.flatten(),
+)
+
+// codes
+#let code(text, lang: "python", breakable: true, width: 100%) = block(
+  fill: rgb("#F3F3F3"),
+  stroke: rgb("#DBDBDB"),
+  inset: (x: 1em, y: 1em),
+  outset: -.3em,
+  radius: 5pt,
+  spacing: 1em,
+  breakable: breakable,
+  width: width,
+  raw(
+    text,
+    lang: lang,
+    align: left,
+    block: true,
+  ),
 )
 
 // theorems
