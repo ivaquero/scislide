@@ -4,8 +4,6 @@
 #import themes.metropolis: *
 // indent
 #import "@preview/indenta:0.0.3": fix-indent
-// checklist
-#import "@preview/cheq:0.2.2": checklist
 // theorems
 #import "@preview/ctheorems:1.1.3": *
 // physics
