@@ -109,19 +109,9 @@
     #it.body
   ]
   show figure.where(kind: table): set figure.caption(position: top)
-
-  codly(
-    languages: codly-languages,
-    display-name: false,
-    fill: rgb("#F2F3F4"),
-    number-format: none,
-    zebra-fill: none,
-    inset: (x: .3em, y: .2em),
-    radius: .5em,
-  )
-  show: codly-init.with()
-
   show link: underline
+
+  show: codly-init.with()
   show: metropolis-theme.with(
     aspect-ratio: "16-9",
     footer: text(footer, size: footer-size, font: fonts.at("zh").footer),
@@ -141,13 +131,26 @@
       neutral-lightest: rgb("#ffffff"),
       neutral-dark: rgb("#3297df"),
     ),
+    config-common(
+      preamble: {
+        codly(
+          languages: codly-languages,
+          display-name: false,
+          fill: rgb("#F2F3F4"),
+          number-format: none,
+          zebra-fill: none,
+          inset: (x: .3em, y: .2em),
+          radius: .5em,
+        )
+      },
+    ),
   )
 
-  show: thmrules
+  show: thmrules.with(qed-symbol: $square$)
   show: fix-indent()
 
   title-slide()
-  outline(title: "内容提要", indent: auto, depth: 1)
+  outline(title: outline-title, indent: 2em, depth: 1)
   doc
 
   slide(align: center + horizon)[
