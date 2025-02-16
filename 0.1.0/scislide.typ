@@ -70,6 +70,37 @@
     },
   )
 
+  show heading.where(level: 1): it => {
+    counter(math.equation).update(0)
+    it
+  }
+
+  show math.equation: it => {
+    if it.has("label") {
+      math.equation(
+        block: true,
+        numbering: n => {
+          numbering("(1)", n)
+        },
+        it,
+      )
+    } else {
+      it
+    }
+  }
+
+  show ref: it => {
+    let el = it.element
+    if el != none and el.func() == math.equation {
+      link(
+        el.location(),
+        numbering("(1)", counter(math.equation).at(el.location()).at(0) + 1),
+      )
+    } else {
+      it
+    }
+  }
+
   show figure.caption: it => [
     #it.supplement
     #context it.counter.display(it.numbering)
