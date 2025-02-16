@@ -6,10 +6,10 @@
 #import "@preview/indenta:0.0.3": fix-indent
 // checklist
 #import "@preview/cheq:0.2.2": checklist
-// physics
-#import "@preview/physica:0.9.4": *
 // theorems
 #import "@preview/ctheorems:1.1.3": *
+// physics
+#import "@preview/physica:0.9.4": *
 // banners
 #import "@preview/gentle-clues:1.1.0": *
 // subfigures
@@ -33,6 +33,7 @@
   author: (),
   author-size: 14pt,
   institute: none,
+  background-img: "img/sky.png",
   footer: [],
   footer-size: 14pt,
   list-indent: 1.2em,
@@ -49,7 +50,8 @@
   set block(above: 1em, below: 0.5em)
   set list(indent: list-indent)
   set enum(indent: list-indent)
-  set math.equation(numbering: "(1)")
+
+  set page(background: image(background-img, width: 100%))
 
   let fonts = toml("fonts.toml")
   set text(
@@ -148,10 +150,11 @@
   outline(title: "内容提要", indent: auto, depth: 1)
   doc
 
-  focus-slide[
-    #text(ending, font: "Kaiti SC", size: 40pt)
+  slide(align: center + horizon)[
+    #text(ending, font: "Kaiti SC", size: 50pt)
   ]
 }
+
 
 // text
 #let fonts = toml("fonts.toml")
