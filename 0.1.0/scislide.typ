@@ -23,7 +23,7 @@
 // excel
 #import "@preview/rexllent:0.3.0": xlsx-parser
 // func return
-#import "@preview/eqalc:0.1.2": *
+#import "@preview/eqalc:0.1.3": *
 
 #let conf(
   title: none,
