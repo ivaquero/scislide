@@ -5,7 +5,7 @@
 // indent
 #import "@preview/indenta:0.0.3": fix-indent
 // theorems
-#import "@preview/ctheorems:1.1.3": thmbox
+#import "@preview/ctheorems:1.1.3": thmbox, thmrules
 // physics
 #import "@preview/physica:0.9.4": *
 // banners
