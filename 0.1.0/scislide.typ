@@ -7,7 +7,7 @@
 // theorems
 #import "@preview/ctheorems:1.1.3": thmbox, thmrules
 // physics
-#import "@preview/physica:0.9.4": *
+#import "@preview/physica:0.9.4": dd, dv, pdv, dmat
 // banners
 #import "@preview/gentle-clues:1.1.0": clue
 // subfigures
@@ -16,7 +16,7 @@
 #import "@preview/fletcher:0.5.5": diagram, node, edge
 // codes
 #import "@preview/codly:1.2.0": codly-init, codly
-#import "@preview/codly-languages:0.1.6": *
+#import "@preview/codly-languages:0.1.7": *
 // annot
 #import "@preview/pinit:0.2.2": *
 // excel
