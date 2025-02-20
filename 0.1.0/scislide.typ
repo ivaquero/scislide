@@ -1,9 +1,7 @@
 
 // slides
-#import "@preview/touying:0.5.3": *
+#import "@preview/touying:0.6.0": *
 #import themes.metropolis: *
-// indent
-#import "@preview/indenta:0.0.3": fix-indent
 // theorems
 #import "@preview/ctheorems:1.1.3": thmbox, thmrules
 // physics
@@ -16,9 +14,9 @@
 #import "@preview/fletcher:0.5.5": diagram, node, edge
 // codes
 #import "@preview/codly:1.2.0": codly-init, codly
-#import "@preview/codly-languages:0.1.7": *
+#import "@preview/codly-languages:0.1.7": codly-languages
 // annot
-#import "@preview/pinit:0.2.2": *
+#import "@preview/pinit:0.2.2": pin, pinit-highlight, pinit-place
 // excel
 #import "@preview/rexllent:0.3.0": xlsx-parser
 // func return
@@ -144,7 +142,6 @@
   )
 
   show: thmrules.with(qed-symbol: $square$)
-  show: fix-indent()
 
   title-slide()
   outline(title: outline-title, indent: 2em, depth: 1)
