@@ -7,7 +7,7 @@
 // physics
 #import "@preview/physica:0.9.4": dd, dv, pdv, dmat
 // banners
-#import "@preview/gentle-clues:1.1.0": clue
+#import "@preview/gentle-clues:1.2.0": clue, tip, warning
 // subfigures
 #import "@preview/subpar:0.2.1": grid as sgrid
 // diagram
@@ -284,19 +284,4 @@
   padding: (top: 0em, bottom: 0em),
   separator: [],
   // stroke: rgb("#000000")
-)
-
-// banners
-#let tip(title: "", icon: emoji.lightbulb, ..args) = clue(
-  accent-color: rgb("#ffe66b"),
-  title: title,
-  icon: icon,
-  ..args,
-)
-
-#let alert(title: "", icon: emoji.excl, ..args) = clue(
-  accent-color: red,
-  title: title,
-  icon: icon,
-  ..args,
 )
