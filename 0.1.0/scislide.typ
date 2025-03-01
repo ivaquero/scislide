@@ -4,6 +4,8 @@
 #import themes.metropolis: *
 // theorems
 #import "@preview/ctheorems:1.1.3": thmbox, thmrules
+// banners
+#import "@preview/gentle-clues:1.2.0": *
 // physics
 #import "@preview/physica:0.9.4": dd, dv, pdv, dmat
 // subfigures
@@ -116,7 +118,6 @@
       institution: [#institute],
       logo: emoji.school,
     ),
-    config-methods(cover: utils.semi-transparent-cover.with(alpha: 80%)),
     config-colors(
       primary-light: rgb("#fcbd00"),
       secondary: rgb("#3297df"),
@@ -263,16 +264,6 @@
   fill: rgb("#EEFFF1"),
   titlefmt: strong,
 )
-
-#let tip = thmbox(
-  "",
-  none,
-  fill: rgb("#FFFEE6"),
-  radius: 0.5em,
-  padding: (top: 0em, bottom: 0em),
-  separator: [],
-  // stroke: rgb("#000000")
-).with(numbering: none)
 
 #let algo = thmbox(
   "",
