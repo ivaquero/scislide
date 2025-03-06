@@ -7,7 +7,7 @@
 // banners
 #import "@preview/gentle-clues:1.2.0": *
 // physics
-#import "@preview/physica:0.9.4": dd, dv, pdv, dmat
+#import "@preview/physica:0.9.5": dd, dv, pdv, dmat
 // subfigures
 #import "@preview/subpar:0.2.1": grid as sgrid
 // diagram
@@ -19,8 +19,6 @@
 #import "@preview/pinit:0.2.2": pin, pinit-highlight, pinit-place
 // excel
 #import "@preview/rexllent:0.3.0": xlsx-parser
-// func return
-#import "@preview/eqalc:0.1.3": *
 
 #let conf(
   title: none,
