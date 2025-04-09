@@ -1,8 +1,11 @@
 [package]
-    name        = "scislide"
-    version     = "0.1.0"
-    entrypoint  = "scislide.typ"
-    authors     = ["ivaquero"]
-    license     = "MIT"
-    description = "Template for Scientific Slides"
-    repository  = ""
+    name = "qslide"
+    version = "0.1.0"
+    compiler = "0.13.0"
+    repository = "https://github.com/ivaquero/qslide.git"
+    entrypoint = "lib.typ"
+    authors = ["ivaquero"]
+    license = "MIT"
+    description = "A quick-start template based on touying for academic reports"
+    categories = ["presentation", "layout"]
+    keywords = ["touying", "slide"]
