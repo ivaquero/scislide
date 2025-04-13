@@ -27,7 +27,7 @@ Import `touying-quick` from the `@preview` namespace.
 
 ## Clone Official Repository
 
-Clone the [quick](https://github.com/ivaquero/touying-quick) repository to your `@local` workspace:
+Clone the [touying-quick](https://github.com/ivaquero/touying-quick) repository to your `@local` workspace:
 
 - Linux：
   - `$XDG_DATA_HOME/typst/packages/local`
