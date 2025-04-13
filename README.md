@@ -4,7 +4,7 @@ A quick-start slide template based on touying for academic reports.
 
 ## Get Started
 
-Import `quick` from the `@preview` namespace.
+Import `touying-quick` from the `@preview` namespace.
 
 ```typst
 #import "@preview/touying-quick:0.1.0": *

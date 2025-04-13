@@ -1,5 +1,5 @@
-#import "@local/qslide:0.1.0": *
-#show: qslide.with(
+#import "@local/touying-quick:0.1.0": *
+#show: touying-quick.with(
   title: "Writting A Slide Template",
   subtilte: "Typst for Academic Reports",
   institute: "School of Artificial Intelligence",
