@@ -3,9 +3,7 @@
 // multi-languages
 #import "@preview/linguify:0.4.2": linguify, set-database
 // theorems
-#import "@preview/ctheorems:1.1.3": thmbox, thmrules
-// banners
-#import "@preview/gentle-clues:1.2.0": *
+#import "@preview/theorion:0.3.3": *
 // physics
 #import "@preview/physica:0.9.5": dd, dv, pdv, dmat
 // subfigures
@@ -148,7 +146,8 @@
     ),
   )
 
-  show: thmrules.with(qed-symbol: $square$)
+  set-inherited-levels(1)
+  show: show-theorion
 
   title-slide()
   outline(title: linguify("outline"), indent: 2em, depth: 1)
@@ -214,66 +213,17 @@
   ),
 )
 
-// theorems
-#let definition = thmbox(
-  "definition",
-  text(linguify("definition")),
-  base_level: 1,
-  separator: [#h(0.5em)],
-  padding: (top: 0em, bottom: 0em),
-  fill: rgb("#FFFFFF"),
-  // stroke: rgb("#000000"),
-  inset: (left: 0em, right: 0.5em, top: 0.2em, bottom: 0.2em),
-)
+#let tip = tip-box
+#let note = note-box
+#let quote = quote-box
+#let warning = warning-box
+#let caution = caution-box
 
-#let theorem = thmbox(
+#let rule = make-frame(
   "theorem",
-  text(linguify("theorem")),
-  base_level: 1,
-  separator: [#h(0.5em)],
-  padding: (top: 0em, bottom: 0.2em),
-  fill: rgb("#E5EEFC"),
-  // stroke: rgb("#000000")
-)
-
-#let lemma = thmbox(
-  "theorem",
-  text(linguify("lemma")),
-  separator: [#h(0.5em)],
-  fill: rgb("#EFE6FF"),
-  titlefmt: strong,
-)
-
-#let corollary = thmbox(
-  "corollary",
-  text(linguify("corollary")),
-  // base: "theorem",
-  separator: [#h(0.5em)],
-  titlefmt: strong,
-)
-
-#let rule = thmbox(
-  "",
   text(linguify("rule")),
-  base_level: 1,
-  separator: [#h(0.5em)],
-  fill: rgb("#EEFFF1"),
-  titlefmt: strong,
-)
-
-#let algo = thmbox(
-  "",
-  text(linguify("algorithm")),
-  base_level: 1,
-  separator: [#h(0.5em)],
-  padding: (top: 0em, bottom: 0.2em),
-  fill: rgb("#FAF2FB"),
-  titlefmt: strong,
-)
-
-#let tip(title: linguify("tip"), icon: emoji.bell, ..args) = clue(
-  accent-color: rgb("#e5c525e9"),
-  title: title,
-  icon: icon,
-  ..args,
+  counter: theorem-counter,
+  inherited-levels: 2, //
+  inherited-from: heading,
+  render: (prefix: none, title: "", full-title: auto, body) => [#strong[#full-title.]#sym.space#emph(body)],
 )
